@@ -202,7 +202,7 @@
         <div class="col">
           <img id="tabela" height="350px" src="assets/images/usuarios_model.png" alt="">
           <p style="font-size: 14px;">Na classe <i>Usuarios</i> a relação com <i>Vacinas</i> e <i>Postos</i> do tipo
-            @OneToMany</p>
+            @ManyToOne</p>
         </div>
         <div class="col">
           <img id="tabela" height="300px" src="assets/images/postos_model.png" alt="">
@@ -217,7 +217,7 @@
     <div class="container-fluid">
       <p id="repository">
         Nosso objetivo é criar três tipos de cadastro: vacinas, postos e usuários.
-        Para isso, vamos criar as classes controller para inserir os end-points.
+        Para isso, vamos criar as classes controller para inserir os endpoints.
         <br>
         As classes controller, precisam receber a injeção de dependência do JPA. Para isso, vamos
         criar <b>interfaces</b> do tipo <i>Repository</i> para estender a JPA. Assim:
@@ -266,7 +266,7 @@
       <p>Caso haja tentativa de cadastro com dados já existentes, o retorno será 400 bad request.
         Caso seja um novo usuário, ele será cadastrado, retornando 201 created.</p>
       <br>
-      <p>Resta criar o end-point para cadastramento de postos. Vamos começar criando nossa regra de negócio:</p>
+      <p>Resta criar o endpoint para cadastramento de postos. Vamos começar criando nossa regra de negócio:</p>
       <img id="img" class="w-250 h-100" src="assets/images/postos_service.png" alt="">
       <p>Aqui faremos uma verificação se existe cadastro da vacina informada. Caso positivo, será feito o cadastro do
         posto, <i>'setando'</i> o estoque da vacina.</p>
